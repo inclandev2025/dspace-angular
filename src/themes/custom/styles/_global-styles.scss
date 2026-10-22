@@ -1,4 +1,48 @@
-// Add any global css for the theme here
-
-// imports the base global style
 @import '../../../styles/_global-styles.scss';
+
+// Only included when the custom theme is active.
+#main-content {
+  padding-block: var(--uagrm-space-4);
+
+  h1 { font-size: clamp(1.75rem, 1.35rem + 1.2vw, 2.125rem); }
+
+  p a:not(.btn) {
+    text-decoration: underline;
+    text-underline-offset: .18em;
+  }
+
+  .card { box-shadow: var(--uagrm-card-shadow); }
+}
+
+// Two colors keep keyboard focus visible on both blue and white surfaces.
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--uagrm-blue) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #fff !important;
+}
+
+// DSpace reuses navbar link variables inside its white dropdowns/mobile menu.
+#main-navbar .dropdown-menu {
+  --ds-navbar-link-color: var(--uagrm-blue);
+  --ds-navbar-link-color-hover: #002b73;
+  border-color: var(--uagrm-border);
+  box-shadow: var(--uagrm-card-shadow);
+}
+
+@media (max-width: 767.98px) {
+  #main-navbar {
+    --ds-navbar-link-color: var(--uagrm-blue);
+    --ds-navbar-link-color-hover: #002b73;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .form-control, .form-select, .card {
+    transition: none;
+  }
+}

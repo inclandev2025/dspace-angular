@@ -1,8 +1,22 @@
-// Override or add CSS variables for your theme here
-
 :root {
-  //--ds-header-logo-height: 80px;
-  //--ds-header-logo-height-xs: 50px;
-  //--ds-header-icon-color: #{$link-color};
-  //--ds-header-icon-color-hover: #{darken($link-color, 15%)};
+  --uagrm-blue: #003b9e;
+  --uagrm-red: #ff000d;
+  --uagrm-ink: #142b50;
+  --uagrm-surface: #f4f7fc;
+  --uagrm-border: #d7dfeb;
+  --uagrm-space-1: .25rem;
+  --uagrm-space-2: .5rem;
+  --uagrm-space-3: 1rem;
+  --uagrm-space-4: 1.5rem;
+  --uagrm-space-5: 2rem;
+  --uagrm-card-shadow: 0 .25rem 1rem rgba(20, 43, 80, .06);
+
+  --ds-breadcrumb-bg: var(--uagrm-surface);
+  --ds-breadcrumb-link-active-color: var(--uagrm-ink);
+  --ds-top-footer-bg: var(--uagrm-surface);
+  --ds-footer-bg: var(--uagrm-blue);
+  --ds-footer-border: var(--uagrm-border);
+  --ds-home-news-background-color: var(--uagrm-surface);
+  --ds-header-navbar-border-bottom-color: var(--uagrm-border);
+  --ds-expandable-navbar-link-background-hover: #e8effb;
 }
