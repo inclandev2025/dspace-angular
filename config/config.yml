@@ -3,3 +3,10 @@ rest:
   host: sandbox.dspace.org
   port: 443
   nameSpace: /server
+
+# UAGRM visual prototype. Environment-specific REST/UI settings keep priority.
+# See docs/uagrm/SPRINT_01.md before local validation or release.
+fallbackLanguage: es
+themes:
+  - name: custom
+    prefetch: true
