@@ -1,0 +1,32 @@
+@import '../../../../app/header/header.component.scss';
+
+:host {
+  header { border-top: 4px solid var(--uagrm-red); }
+
+  .uagrm-header-row {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    padding-block: .75rem;
+  }
+
+  .uagrm-brand {
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+    color: var(--uagrm-blue);
+    line-height: 1.25;
+    margin-right: 0;
+    max-width: 100%;
+    text-decoration: none;
+  }
+
+  .uagrm-brand-acronym {
+    font-size: 1.75rem;
+    font-weight: 750;
+    letter-spacing: .035em;
+  }
+
+  .uagrm-brand-caption { font-size: 1rem; font-weight: 600; }
+  .uagrm-brand-university { font-size: .75rem; color: var(--uagrm-ink); }
+}
