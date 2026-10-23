@@ -16,6 +16,8 @@
   }
 
   @media (max-width: 767.98px) {
+    #main-navbar { background-color: #fff; }
+
     #main-navbar.open {
       max-height: 80vh;
       min-height: 0;
