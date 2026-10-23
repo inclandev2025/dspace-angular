@@ -1,4 +1,25 @@
 {
+  // UAGRM theme — source: src/themes/custom/assets/i18n/en.json5
+  "uagrm.brand.repository": "Institutional repository",
+  "uagrm.brand.home": "UAGRM institutional repository — Home",
+  "uagrm.nav.home": "Home",
+  "uagrm.home.eyebrow": "Universidad Autónoma Gabriel René Moreno",
+  "uagrm.home.title": "Knowledge that connects and reaches further.",
+  "uagrm.home.intro": "Explore the academic and scientific output of our university. Find documents, discover research and consult its sources.",
+  "uagrm.home.search.label": "Search the repository",
+  "uagrm.home.search.placeholder": "Title, author or keywords",
+  "uagrm.home.search.hint": "Search for a topic, an author’s name or a work’s title.",
+  "uagrm.home.shortcuts": "Repository shortcuts",
+  "uagrm.home.communities.title": "Communities and collections",
+  "uagrm.home.communities.description": "Explore documents organized by academic units.",
+  "uagrm.home.explore.title": "Explore publications",
+  "uagrm.home.explore.description": "Browse the repository and refine your search using filters.",
+  "uagrm.footer.description": "A space to discover, preserve and share the university’s academic output.",
+  "uagrm.footer.explore": "Explore the repository",
+  "uagrm.footer.institution": "Institutional links",
+  "uagrm.footer.website": "UAGRM website",
+  "uagrm.footer.powered": "Powered by DSpace",
+
   "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
 
   "401.link.home-page": "Take me to the home page",
