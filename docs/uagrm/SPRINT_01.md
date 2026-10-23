@@ -139,3 +139,12 @@ $env:NODE_OPTIONS='--max-old-space-size=6144'
 $env:NG_BUILD_MAX_WORKERS='2'
 npm.cmd run build -- --source-map=false
 ```
+
+
+## Aprobación y respaldo
+
+El 22/10/2026 el usuario indicó que la entrega se ve bien y autorizó el Sprint 2.
+Se creó `backup/sprint-01-aprobado-2026-10-22` en el commit
+`6068fafe36d1e3b824ee7c2660d0e24208ab33f2`. La guía de recuperación y el trabajo
+siguiente están en [SPRINT_02.md](SPRINT_02.md). La aprobación visual no reemplaza
+las validaciones de producción ni la incorporación del escudo/favicon oficiales.

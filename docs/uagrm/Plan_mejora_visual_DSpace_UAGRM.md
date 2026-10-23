@@ -250,3 +250,16 @@ Escudo/favicon oficiales y versión exacta institucional siguen pendientes.
 No se ha desplegado ni fusionado en producción. Las limitaciones del registro
 anterior corresponden al momento de la investigación inicial; ya existe una
 copia de trabajo del frontend y se instalaron dependencias para verificar el tema.
+
+
+## 13. Respaldo y Sprint 2 — 22/10/2026
+
+El usuario aprobó visualmente el Sprint 1. Respaldo remoto:
+`backup/sprint-01-aprobado-2026-10-22`, SHA
+`6068fafe36d1e3b824ee7c2660d0e24208ab33f2`.
+
+Se desarrolla la portada, navegación móvil, pie institucional y traducciones en
+`feature/uagrm-home-navigation-sprint-02`. Datos de comunidades y publicaciones
+provienen de los componentes originales de DSpace. No se agregan estadísticas
+ficticias ni noticias de ejemplo. Ver [SPRINT_02.md](SPRINT_02.md) para pruebas
+locales y recuperación. Estado: entrega pendiente de revisión local del Sprint 2.
