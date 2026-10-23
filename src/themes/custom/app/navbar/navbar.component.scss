@@ -1,0 +1,30 @@
+@import '../../../../app/navbar/navbar.component.scss';
+
+:host {
+  #main-navbar {
+    border-bottom: 1px solid var(--uagrm-border);
+  }
+
+  #main-navbar ::ng-deep {
+    .ds-menu-item { padding: .75rem .5rem; border-radius: .25rem; }
+    .ds-menu-item:hover { text-decoration: underline; text-underline-offset: .2em; }
+    .dropdown-menu { border-radius: .5rem; }
+  }
+
+  @media (min-width: 768px) {
+    #main-navbar ::ng-deep .navbar-nav { flex-wrap: wrap; }
+  }
+
+  @media (max-width: 767.98px) {
+    #main-navbar.open {
+      max-height: 80vh;
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-bottom: 1rem;
+      box-shadow: var(--uagrm-card-shadow);
+    }
+
+    #main-navbar ::ng-deep .ds-menu-item { white-space: normal; }
+  }
+}
