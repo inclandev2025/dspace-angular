@@ -1,9 +1,9 @@
 <header>
   <div class="container">
     <div class="d-flex flex-row justify-content-between uagrm-header-row">
-      <a class="navbar-brand my-2 uagrm-brand" routerLink="/home">
+      <a class="navbar-brand my-2 uagrm-brand" routerLink="/home" [attr.aria-label]="'uagrm.brand.home' | translate">
         <span class="uagrm-brand-acronym">UAGRM</span>
-        <span class="uagrm-brand-caption">Repositorio institucional</span>
+        <span class="uagrm-brand-caption">{{ 'uagrm.brand.repository' | translate }}</span>
         <span class="uagrm-brand-university">Universidad Autónoma Gabriel René Moreno</span>
       </a>
 
@@ -19,7 +19,7 @@
           <div class="ps-2">
             <button class="navbar-toggler px-0" type="button" (click)="toggleNavbar()"
               aria-controls="collapsingNav"
-              aria-expanded="false" [attr.aria-label]="'nav.toggle' | translate">
+              [attr.aria-expanded]="(menuCollapsed$ | async) === false" [attr.aria-label]="'nav.toggle' | translate">
               <span class="fas fa-bars fa-fw toggler-icon" aria-hidden="true"></span>
             </button>
           </div>

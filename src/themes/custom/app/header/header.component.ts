@@ -28,4 +28,5 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
   ],
 })
 export class HeaderComponent extends BaseComponent {
+  readonly menuCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
 }
