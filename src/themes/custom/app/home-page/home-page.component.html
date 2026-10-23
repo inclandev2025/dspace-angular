@@ -1,0 +1,55 @@
+<ds-home-coar></ds-home-coar>
+<section class="uagrm-hero" aria-labelledby="uagrm-home-title">
+  <div class="container">
+    <p class="uagrm-eyebrow">{{ 'uagrm.home.eyebrow' | translate }}</p>
+    <h1 id="uagrm-home-title">{{ 'uagrm.home.title' | translate }}</h1>
+    <p class="uagrm-hero-intro">{{ 'uagrm.home.intro' | translate }}</p>
+    <div class="uagrm-search-panel" role="search" [attr.aria-label]="'uagrm.home.search.label' | translate">
+      <h2 class="h5">{{ 'uagrm.home.search.label' | translate }}</h2>
+      <ds-search-form [inPlaceSearch]="false" [showScopeSelector]="false"
+        [searchPlaceholder]="'uagrm.home.search.placeholder' | translate">
+      </ds-search-form>
+      <p class="uagrm-search-hint">{{ 'uagrm.home.search.hint' | translate }}</p>
+    </div>
+  </div>
+</section>
+
+<nav class="container uagrm-shortcuts" [attr.aria-label]="'uagrm.home.shortcuts' | translate">
+  <a class="uagrm-shortcut" routerLink="/community-list">
+    <span class="uagrm-shortcut-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+    <span><strong>{{ 'uagrm.home.communities.title' | translate }}</strong>
+      <span class="uagrm-shortcut-description">{{ 'uagrm.home.communities.description' | translate }}</span>
+    </span>
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  </a>
+  <a class="uagrm-shortcut" routerLink="/search">
+    <span class="uagrm-shortcut-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+    <span><strong>{{ 'uagrm.home.explore.title' | translate }}</strong>
+      <span class="uagrm-shortcut-description">{{ 'uagrm.home.explore.description' | translate }}</span>
+    </span>
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  </a>
+</nav>
+
+@if (showDiscoverFilters) {
+  <ds-configuration-search-page [sideBarWidth]="3" [showViewModes]="false"
+    [searchEnabled]="false" [inPlaceSearch]="false" [showScopeSelector]="false">
+    <ng-container searchContentTop *ngTemplateOutlet="homeContent"></ng-container>
+  </ds-configuration-search-page>
+} @else {
+  <div class="container">
+    <ng-container *ngTemplateOutlet="homeContent"></ng-container>
+  </div>
+}
+<ds-suggestions-popup></ds-suggestions-popup>
+
+<ng-template #homeContent>
+  <section class="uagrm-content-panel" [attr.aria-label]="'home.top-level-communities.head' | translate">
+    <ds-top-level-community-list></ds-top-level-community-list>
+  </section>
+  @if (recentSubmissionspageSize > 0) {
+    <section class="uagrm-recent" [attr.aria-label]="'home.recent-submissions.head' | translate">
+      <ds-recent-item-list></ds-recent-item-list>
+    </section>
+  }
+</ng-template>

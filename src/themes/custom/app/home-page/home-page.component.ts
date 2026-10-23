@@ -1,9 +1,9 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { HomeCoarComponent } from '../../../../app/home-page/home-coar/home-coar.component';
-import { ThemedHomeNewsComponent } from '../../../../app/home-page/home-news/themed-home-news.component';
 import { HomePageComponent as BaseComponent } from '../../../../app/home-page/home-page.component';
 import { RecentItemListComponent } from '../../../../app/home-page/recent-item-list/recent-item-list.component';
 import { ThemedTopLevelCommunityListComponent } from '../../../../app/home-page/top-level-community-list/themed-top-level-community-list.component';
@@ -13,17 +13,15 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
 
 @Component({
   selector: 'ds-themed-home-page',
-  // styleUrls: ['./home-page.component.scss'],
-  styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  // templateUrl: './home-page.component.html'
-  templateUrl: '../../../../app/home-page/home-page.component.html',
+  styleUrls: ['./home-page.component.scss'],
+  templateUrl: './home-page.component.html',
   imports: [
     HomeCoarComponent,
     NgTemplateOutlet,
     RecentItemListComponent,
+    RouterLink,
     SuggestionsPopupComponent,
     ThemedConfigurationSearchPageComponent,
-    ThemedHomeNewsComponent,
     ThemedSearchFormComponent,
     ThemedTopLevelCommunityListComponent,
     TranslateModule,

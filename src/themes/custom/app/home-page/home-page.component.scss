@@ -1,0 +1,98 @@
+@import '../../../../app/home-page/home-page.component.scss';
+
+:host {
+  display: block;
+
+  .uagrm-hero {
+    padding: clamp(2rem, 5vw, 4rem) 0 2.5rem;
+    background: linear-gradient(120deg, #002b73, #003b9e);
+    color: #fff;
+    border-bottom: 4px solid var(--uagrm-red);
+  }
+
+  .uagrm-eyebrow {
+    font-size: .8rem;
+    font-weight: 650;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  #uagrm-home-title {
+    color: #fff;
+    font-size: clamp(2rem, 1.25rem + 2.5vw, 3.5rem);
+    max-width: 20ch;
+    margin-bottom: 1rem;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  .uagrm-hero-intro { max-width: 65ch; font-size: 1.125rem; margin-bottom: 2rem; }
+
+  .uagrm-search-panel {
+    background: #fff;
+    color: var(--uagrm-ink);
+    padding: clamp(1rem, 3vw, 1.75rem);
+    border-radius: .75rem;
+    box-shadow: 0 .75rem 2rem rgba(0, 20, 60, .2);
+    max-width: 58rem;
+  }
+
+  .uagrm-search-hint { color: #49586c; font-size: .875rem; margin: 0; }
+
+  .uagrm-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-block: 2rem;
+  }
+
+  .uagrm-shortcut {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--uagrm-border);
+    border-radius: .75rem;
+    color: var(--uagrm-blue);
+    text-decoration: none;
+    background: #fff;
+    transition: background-color .15s;
+
+    > span:nth-child(2) { flex: 1; min-width: 0; }
+    &:hover { background: var(--uagrm-surface); border-color: var(--uagrm-blue); }
+    &:hover strong { text-decoration: underline; }
+  }
+
+  .uagrm-shortcut-icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    background: var(--uagrm-surface);
+    border-radius: .5rem;
+  }
+
+  .uagrm-shortcut-description { display: block; font-size: .875rem; color: #49586c; margin-top: .25rem; }
+
+  .uagrm-content-panel {
+    display: flow-root;
+    padding: clamp(1rem, 3vw, 2rem);
+    margin-bottom: 2rem;
+    border: 1px solid var(--uagrm-border);
+    border-radius: .75rem;
+    background: #fff;
+  }
+
+  .uagrm-recent { display: flow-root; margin-bottom: 2rem; }
+
+  @media (max-width: 767.98px) {
+    .uagrm-shortcuts { grid-template-columns: 1fr; }
+    .uagrm-shortcut { gap: .75rem; padding: 1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .uagrm-shortcut { transition: none; }
+  }
+}
