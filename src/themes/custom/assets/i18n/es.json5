@@ -1,0 +1,21 @@
+{
+  "uagrm.brand.repository": "Repositorio institucional",
+  "uagrm.brand.home": "Repositorio institucional UAGRM — Inicio",
+  "uagrm.nav.home": "Inicio",
+  "uagrm.home.eyebrow": "Universidad Autónoma Gabriel René Moreno",
+  "uagrm.home.title": "Conocimiento que conecta y trasciende.",
+  "uagrm.home.intro": "Explora la producción académica y científica de nuestra universidad. Encuentra documentos, descubre investigaciones y consulta sus fuentes.",
+  "uagrm.home.search.label": "Busca en el repositorio",
+  "uagrm.home.search.placeholder": "Título, autor o palabras clave",
+  "uagrm.home.search.hint": "Puedes buscar por un tema, el nombre de un autor o el título de un trabajo.",
+  "uagrm.home.shortcuts": "Accesos al repositorio",
+  "uagrm.home.communities.title": "Comunidades y colecciones",
+  "uagrm.home.communities.description": "Explora los documentos organizados por unidades académicas.",
+  "uagrm.home.explore.title": "Explorar publicaciones",
+  "uagrm.home.explore.description": "Consulta el repositorio y refina tu búsqueda con filtros.",
+  "uagrm.footer.description": "Un espacio para descubrir, preservar y compartir la producción académica de la universidad.",
+  "uagrm.footer.explore": "Explora el repositorio",
+  "uagrm.footer.institution": "Enlaces institucionales",
+  "uagrm.footer.website": "Portal de la UAGRM",
+  "uagrm.footer.powered": "Plataforma DSpace"
+}
