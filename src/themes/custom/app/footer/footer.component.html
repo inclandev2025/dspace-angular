@@ -1,0 +1,67 @@
+<footer class="uagrm-footer">
+  <div class="container uagrm-footer-grid">
+    <div>
+      <p class="uagrm-footer-brand">UAGRM</p>
+      <p class="h5 text-white">{{ 'uagrm.brand.repository' | translate }}</p>
+      <p>Universidad Autónoma Gabriel René Moreno</p>
+      <p class="uagrm-footer-description">{{ 'uagrm.footer.description' | translate }}</p>
+    </div>
+    <nav [attr.aria-label]="'uagrm.footer.explore' | translate">
+      <h2 class="h6 text-white">{{ 'uagrm.footer.explore' | translate }}</h2>
+      <ul class="list-unstyled">
+        <li><a routerLink="/home">{{ 'uagrm.nav.home' | translate }}</a></li>
+        <li><a routerLink="/community-list">{{ 'uagrm.home.communities.title' | translate }}</a></li>
+        <li><a routerLink="/search">{{ 'uagrm.home.explore.title' | translate }}</a></li>
+      </ul>
+    </nav>
+    <nav [attr.aria-label]="'uagrm.footer.institution' | translate">
+      <h2 class="h6 text-white">{{ 'uagrm.footer.institution' | translate }}</h2>
+      <ul class="list-unstyled">
+        <li><a href="https://www.uagrm.edu.bo/">{{ 'uagrm.footer.website' | translate }}</a></li>
+        <li><a href="https://www.dspace.org/">DSpace</a></li>
+        <li><a href="https://www.lyrasis.org/">Lyrasis</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container uagrm-footer-bottom">
+    <p>© {{ dateObj | date:'y' }} UAGRM · {{ 'uagrm.footer.powered' | translate }}</p>
+
+      <ul class="footer-info list-unstyled d-flex justify-content-center mb-0">
+        @if (showCookieSettings) {
+        <li>
+          <button class="btn btn-link text-white" type="button" (click)="openCookieSettings()">
+            {{ 'footer.link.cookies' | translate}}
+          </button>
+        </li>
+        }
+        <li>
+          <a class="btn btn-link text-white"
+             routerLink="/info/accessibility">{{ 'footer.link.accessibility' | translate }}</a>
+        </li>
+        @if (showPrivacyPolicy) {
+          <li>
+            <a class="btn btn-link text-white"
+            routerLink="/info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
+          </li>
+        }
+        @if (showEndUserAgreement) {
+          <li>
+            <a class="btn btn-link text-white"
+            routerLink="/info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate}}</a>
+          </li>
+        }
+        @if (showSendFeedback$ | async) {
+          <li>
+            <a class="btn btn-link text-white"
+            routerLink="/info/feedback">{{ 'footer.link.feedback' | translate}}</a>
+          </li>
+        }
+      </ul>
+    @if (coarLdnEnabled$ | async) {
+      <a class="uagrm-coar" routerLink="/info/coar-notify-support">
+        <img src="assets/images/n-coar.svg" alt="COAR Notify" width="24" height="24" />
+        {{ 'footer.link.coar-notify-support' | translate }}
+      </a>
+    }
+  </div>
+</footer>
