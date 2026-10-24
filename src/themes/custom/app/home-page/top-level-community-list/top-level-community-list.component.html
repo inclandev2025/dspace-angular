@@ -1,0 +1,27 @@
+<ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
+  @if (communitiesRD?.hasSucceeded) {
+    <div class="uagrm-communities-heading">
+      <div>
+        <p class="uagrm-section-label">{{ 'uagrm.home.communities.eyebrow' | translate }}</p>
+        <h2>{{ 'uagrm.home.communities.heading' | translate }}</h2>
+        <p>{{ 'home.top-level-communities.help' | translate }}</p>
+      </div>
+      <a routerLink="/community-list">{{ 'uagrm.home.communities.title' | translate }}
+        <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+      </a>
+    </div>
+    <ds-viewable-collection class="uagrm-community-collection"
+      [config]="config"
+      [sortConfig]="sortConfig"
+      [showRSS]="rssSortConfig"
+      [objects]="communitiesRD$ | async"
+      [hideGear]="true">
+    </ds-viewable-collection>
+  }
+  @if (communitiesRD?.hasFailed) {
+    <ds-error message="{{ 'error.top-level-communities' | translate }}"></ds-error>
+  }
+  @if (communitiesRD?.isLoading) {
+    <ds-loading message="{{ 'loading.top-level-communities' | translate }}"></ds-loading>
+  }
+</ng-container>

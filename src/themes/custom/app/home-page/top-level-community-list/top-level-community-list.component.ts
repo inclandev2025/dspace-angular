@@ -1,5 +1,6 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { TopLevelCommunityListComponent as BaseComponent } from '../../../../../app/home-page/top-level-community-list/top-level-community-list.component';
@@ -10,14 +11,13 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
 
 @Component({
   selector: 'ds-themed-top-level-community-list',
-  // styleUrls: ['./top-level-community-list.component.scss'],
-  styleUrls: ['../../../../../app/home-page/top-level-community-list/top-level-community-list.component.scss'],
-  // templateUrl: './top-level-community-list.component.html'
-  templateUrl: '../../../../../app/home-page/top-level-community-list/top-level-community-list.component.html',
+  styleUrls: ['./top-level-community-list.component.scss'],
+  templateUrl: './top-level-community-list.component.html',
   imports: [
     AsyncPipe,
     ErrorComponent,
     ObjectCollectionComponent,
+    RouterLink,
     ThemedLoadingComponent,
     TranslateModule,
     VarDirective,

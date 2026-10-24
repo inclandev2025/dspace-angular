@@ -1,0 +1,28 @@
+:host {
+  display: block;
+
+  .uagrm-communities-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .uagrm-section-label { font-size: .6875rem; color: #526782; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .75rem; }
+  h2 { font-size: clamp(1.75rem, 3vw, 2.125rem); letter-spacing: -.035em; }
+  .uagrm-communities-heading p:last-child { color: #526782; font-size: .875rem; margin-bottom: 0; max-width: 46rem; }
+  .uagrm-communities-heading > a { font-size: .875rem; flex-shrink: 0; }
+
+  // Keep native links, descriptions, counts, pagination and RSS controls.
+  .uagrm-community-collection ::ng-deep ds-object-list {
+    ul.list-unstyled { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    ul.list-unstyled > li { margin: 0 !important; padding: 1.5rem; border: 1px solid var(--uagrm-border); border-radius: .375rem; background: #fff; overflow-wrap: anywhere; }
+    ul.list-unstyled > li:hover { background: var(--uagrm-surface); border-color: #9db7dc; }
+    ds-listable-object-component-loader { display: block; width: 100%; min-width: 0; }
+    .lead { font-size: 1rem; font-weight: 600; line-height: 1.45; }
+    .abstract-text { font-size: .8125rem; margin-top: .75rem; }
+  }
+
+  @media (max-width: 991.98px) {
+    .uagrm-community-collection ::ng-deep ds-object-list ul.list-unstyled { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 767.98px) {
+    .uagrm-communities-heading { flex-direction: column; align-items: flex-start; }
+    .uagrm-community-collection ::ng-deep ds-object-list ul.list-unstyled { grid-template-columns: minmax(0, 1fr); }
+  }
+}
