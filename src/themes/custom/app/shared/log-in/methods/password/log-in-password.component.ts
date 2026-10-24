@@ -1,0 +1,32 @@
+import { AsyncPipe } from '@angular/common';
+import { Component } from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { fadeOut } from '../../../../../../../app/shared/animations/fade';
+import { BtnDisabledDirective } from '../../../../../../../app/shared/btn-disabled.directive';
+import { LogInPasswordComponent as BaseComponent } from '../../../../../../../app/shared/log-in/methods/password/log-in-password.component';
+import { BrowserOnlyPipe } from '../../../../../../../app/shared/utils/browser-only.pipe';
+
+/** Native password authentication and recovery, without the self-registration link. */
+@Component({
+  selector: 'ds-uagrm-log-in-password',
+  templateUrl: './log-in-password.component.html',
+  styleUrls: ['../../../../../../../app/shared/log-in/methods/password/log-in-password.component.scss'],
+  animations: [fadeOut],
+  imports: [
+    AsyncPipe,
+    BrowserOnlyPipe,
+    BtnDisabledDirective,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterLink,
+    TranslateModule,
+  ],
+})
+export class UagrmLogInPasswordComponent extends BaseComponent {
+}
