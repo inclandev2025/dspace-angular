@@ -1,14 +1,14 @@
 :host {
   display: block;
 
-  .uagrm-footer { background: #002b73; color: #fff; border-top: 4px solid var(--uagrm-red); }
+  .uagrm-footer { background: var(--uagrm-night); color: #d6deeb; border-top: 3px solid var(--uagrm-red); }
   .uagrm-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; padding-block: 3rem; }
-  .uagrm-footer-brand { font-size: 1.75rem; font-weight: 750; letter-spacing: .035em; margin-bottom: .5rem; }
+  .uagrm-footer-brand { font-size: 1.75rem; font-weight: 750; letter-spacing: -.035em; margin-bottom: .5rem; color: #fff; }
   .uagrm-footer-description { max-width: 45ch; font-size: .875rem; margin-bottom: 0; }
   a { color: #fff; text-underline-offset: .2em; }
   nav a { display: inline-block; padding-block: .4rem; }
   a:hover { text-decoration: underline; }
-  .uagrm-footer-bottom { border-top: 1px solid #6f8dbe; padding-block: 1.5rem; font-size: .875rem; }
+  .uagrm-footer-bottom { border-top: 1px solid #425b80; padding-block: 1.5rem; font-size: .8125rem; }
   .footer-info { flex-wrap: wrap; gap: .25rem .75rem; justify-content: flex-start !important; }
   .footer-info .btn { padding: .4rem 0; font-size: .875rem; text-align: start; white-space: normal; }
   .uagrm-coar { display: inline-flex; align-items: center; gap: .5rem; margin-top: 1rem; }
