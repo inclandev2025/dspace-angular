@@ -1,35 +1,42 @@
 <ds-home-coar></ds-home-coar>
 <section class="uagrm-hero" aria-labelledby="uagrm-home-title">
-  <div class="container">
-    <p class="uagrm-eyebrow">{{ 'uagrm.home.eyebrow' | translate }}</p>
-    <h1 id="uagrm-home-title">{{ 'uagrm.home.title' | translate }}</h1>
-    <p class="uagrm-hero-intro">{{ 'uagrm.home.intro' | translate }}</p>
-    <div class="uagrm-search-panel" role="search" [attr.aria-label]="'uagrm.home.search.label' | translate">
-      <h2 class="h5">{{ 'uagrm.home.search.label' | translate }}</h2>
-      <ds-search-form [inPlaceSearch]="false" [showScopeSelector]="false"
-        [searchPlaceholder]="'uagrm.home.search.placeholder' | translate">
-      </ds-search-form>
-      <p class="uagrm-search-hint">{{ 'uagrm.home.search.hint' | translate }}</p>
+  <div class="container uagrm-hero-grid">
+    <div>
+      <p class="uagrm-eyebrow">{{ 'uagrm.home.eyebrow' | translate }}</p>
+      <h1 id="uagrm-home-title">{{ 'uagrm.home.title' | translate }}
+        <span>{{ 'uagrm.home.title.accent' | translate }}</span>
+      </h1>
+      <p class="uagrm-hero-intro">{{ 'uagrm.home.intro' | translate }}</p>
+      <a class="uagrm-hero-link" routerLink="/search">
+        {{ 'uagrm.home.explore.title' | translate }}
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="uagrm-knowledge-orbit" aria-hidden="true">
+      <div class="uagrm-orbit-ring uagrm-orbit-ring-outer"></div>
+      <div class="uagrm-orbit-ring uagrm-orbit-ring-cross"></div>
+      <div class="uagrm-orbit-core"></div>
+      <div class="uagrm-orbit-ring"></div>
+      <div class="uagrm-orbit-dot"></div>
+      <div class="uagrm-orbit-dot uagrm-orbit-dot-secondary"></div>
+      <span class="uagrm-orbit-caption">{{ 'uagrm.home.orbit.caption' | translate }}</span>
+      <span class="uagrm-orbit-bottom">{{ 'uagrm.home.orbit.tagline' | translate }}</span>
     </div>
   </div>
 </section>
 
-<nav class="container uagrm-shortcuts" [attr.aria-label]="'uagrm.home.shortcuts' | translate">
-  <a class="uagrm-shortcut" routerLink="/community-list">
-    <span class="uagrm-shortcut-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
-    <span><strong>{{ 'uagrm.home.communities.title' | translate }}</strong>
-      <span class="uagrm-shortcut-description">{{ 'uagrm.home.communities.description' | translate }}</span>
-    </span>
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  </a>
-  <a class="uagrm-shortcut" routerLink="/search">
-    <span class="uagrm-shortcut-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
-    <span><strong>{{ 'uagrm.home.explore.title' | translate }}</strong>
-      <span class="uagrm-shortcut-description">{{ 'uagrm.home.explore.description' | translate }}</span>
-    </span>
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  </a>
-</nav>
+<section class="container uagrm-search-section" aria-labelledby="uagrm-search-title">
+  <div class="uagrm-search-panel" role="search" [attr.aria-label]="'uagrm.home.search.label' | translate">
+    <div class="uagrm-search-title-row">
+      <h2 id="uagrm-search-title">{{ 'uagrm.home.search.label' | translate }}</h2>
+      <p>{{ 'uagrm.home.search.types' | translate }}</p>
+    </div>
+    <ds-search-form [inPlaceSearch]="false" [showScopeSelector]="false"
+      [searchPlaceholder]="'uagrm.home.search.placeholder' | translate">
+    </ds-search-form>
+    <p class="uagrm-search-hint">{{ 'uagrm.home.search.hint' | translate }}</p>
+  </div>
+</section>
 
 @if (showDiscoverFilters) {
   <ds-configuration-search-page [sideBarWidth]="3" [showViewModes]="false"
@@ -48,8 +55,17 @@
     <ds-top-level-community-list></ds-top-level-community-list>
   </section>
   @if (recentSubmissionspageSize > 0) {
-    <section class="uagrm-recent" [attr.aria-label]="'home.recent-submissions.head' | translate">
-      <ds-recent-item-list></ds-recent-item-list>
-    </section>
+    <ds-uagrm-recent-item-list></ds-uagrm-recent-item-list>
   }
+  <section class="uagrm-info-band" aria-labelledby="uagrm-info-title">
+    <div>
+      <p class="uagrm-section-label">{{ 'uagrm.home.about.eyebrow' | translate }}</p>
+      <h2 id="uagrm-info-title">{{ 'uagrm.home.about.title' | translate }}</h2>
+      <p>{{ 'uagrm.footer.description' | translate }}</p>
+    </div>
+    <a class="btn btn-outline-primary" href="https://www.uagrm.edu.bo/">
+      {{ 'uagrm.footer.website' | translate }}
+      <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+    </a>
+  </section>
 </ng-template>
