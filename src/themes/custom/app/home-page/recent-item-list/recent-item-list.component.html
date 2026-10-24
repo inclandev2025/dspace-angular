@@ -1,0 +1,36 @@
+<ng-container *ngVar="(itemRD$ | async) as itemRD">
+  @if (itemRD?.hasSucceeded && itemRD?.payload?.page.length > 0) {
+    <section class="uagrm-recent-layout" [ngClass]="placeholderFontClass" @fadeIn aria-labelledby="uagrm-recent-title">
+      <div class="uagrm-recent-intro">
+        <p class="uagrm-section-label">{{ 'uagrm.home.recent.eyebrow' | translate }}</p>
+        <h2 id="uagrm-recent-title">{{ 'uagrm.home.recent.title' | translate }}</h2>
+        <div class="uagrm-accent-rule" aria-hidden="true"></div>
+        <p>{{ 'uagrm.home.recent.intro' | translate }}</p>
+        <a routerLink="/search">{{ 'uagrm.home.explore.title' | translate }}
+          <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="uagrm-recent-content">
+        <h3 class="uagrm-recent-label">{{ 'home.recent-submissions.head' | translate }}</h3>
+        <ul class="uagrm-recent-list list-unstyled m-0 p-0">
+          @for (item of itemRD?.payload?.page; track item) {
+            <li>
+              <ds-listable-object-component-loader [object]="item" [viewMode]="viewMode">
+              </ds-listable-object-component-loader>
+            </li>
+          }
+        </ul>
+        <button (click)="onLoadMore()" class="btn btn-outline-primary mt-4" type="button">
+          {{ 'vocabulary-treeview.load-more' | translate }}
+          <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+  }
+  @if (itemRD?.hasFailed) {
+    <ds-error message="{{ 'error.recent-submissions' | translate }}"></ds-error>
+  }
+  @if (!itemRD || itemRD.isLoading) {
+    <ds-loading message="{{ 'loading.recent-submissions' | translate }}"></ds-loading>
+  }
+</ng-container>
