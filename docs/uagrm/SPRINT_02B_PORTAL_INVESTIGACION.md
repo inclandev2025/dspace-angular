@@ -2,6 +2,44 @@
 
 Fecha de trabajo: 24/10/2026 (Bolivia).
 
+## Observaciones aplicadas — 24/10/2026
+
+Base de esta corrección: `72c21fa4a9a98ffe26e14e29d8bf3f69f99b3b6e`.
+
+- Retirado del pie el bloque COAR Notify (icono y enlace). Esto no desactiva el
+  protocolo COAR ni otros componentes relacionados del servidor o de la portada.
+- Retirado ORCID de los métodos visibles del formulario de acceso del tema,
+  tanto en el desplegable del encabezado como en `/login`. Se parte de la lista
+  nativa del backend y se respetan las exclusiones que indique cada llamador;
+  solo se filtra `AuthMethodType.Orcid`.
+- Retirado el enlace «¿Nuevo Usuario? Pulse aquí para registrarse». El contenedor
+  del tema selecciona una subclase del componente nativo de contraseña con una
+  plantilla propia sin autorregistro. La autenticación, validación, errores,
+  redirecciones y recuperación de contraseña siguen siendo las originales.
+  No se altera el mapa global de proveedores ni los componentes de `src/app`.
+- Idiomas activos configurados mediante el bloque soportado `languages` de
+  `config/config.yml`: español e inglés. La mezcla de configuración reemplaza
+  el arreglo completo, por lo que no añade las otras lenguas predeterminadas.
+  Si un archivo local/externo o variables de entorno vuelven a definir ese bloque,
+  aplicar allí la misma lista de dos idiomas, conservando sus ajustes REST/UI.
+
+Estos son cambios de presentación y configuración del frontend; no deshabilitan
+el registro de cuentas ni el proveedor ORCID en el backend. No se usan CSS oculto
+ni cambios de permisos para retirar los controles del formulario.
+
+Verificación de la corrección:
+
+- Build Angular de desarrollo correcto, código 0, hash `18aa06d312c2cc0d`.
+- Generación real de la configuración runtime: exactamente `es` y `en` activos;
+  endpoint REST y tema `custom` conservados.
+- Plantilla del formulario de contraseña comparada con el original: campos,
+  validación, mensajes y submit conservados; solo cambia el bloque de enlaces.
+- `git diff --check`: correcto. Sin cambios de dependencias ni de `src/app/`.
+- No se realizó autenticación con credenciales reales ni pruebas de integración
+  con el backend local del usuario. Revisar menú de idiomas, acceso desplegable,
+  `/login`, recuperación de contraseña y pie después de actualizar la rama.
+- El SHA de base indicado permite recuperar el Portal anterior a estas observaciones.
+
 ## Decisión y estado
 
 El usuario confirmó que probó las funciones del Sprint 2 y funcionan correctamente.
@@ -51,7 +89,8 @@ Enlaces:
   los componentes nativos, sin encabezados o columnas vacías para una lista vacía.
 - Banda institucional con enlace real al portal UAGRM y pie azul noche. Se mantienen
   los controles originales de cookies, accesibilidad, privacidad, acuerdo, feedback
-  y COAR según configuración y permisos.
+  según configuración y permisos. COAR Notify se retiró del pie por la observación
+  posterior del usuario, registrada al inicio de este documento.
 - 31 claves `uagrm.*` en cada idioma, sincronizadas entre tema y catálogos de ejecución.
 - El espacio superior de la página inicial se elimina con un selector acotado a la
   presencia del componente home; se conserva el espaciado de las otras rutas.
@@ -62,8 +101,9 @@ Los siguientes sprints siguen encargándose de búsqueda completa, facetas y fic
 
 ## Límites
 
-Se mantiene la base `9.5.0-next`; no cambian dependencias, configuración REST/UI,
-backend, base de datos, assetstore ni permisos. El escudo y favicon oficiales siguen
+Se mantiene la base `9.5.0-next`; no cambian dependencias, endpoints REST ni parámetros
+de conexión UI, backend, base de datos, assetstore ni permisos. La lista de idiomas
+del frontend se limita a español e inglés. El escudo y favicon oficiales siguen
 pendientes. No hay merge a la rama base ni despliegue a producción.
 
 ## Verificación
