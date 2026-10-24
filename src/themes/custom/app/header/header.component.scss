@@ -1,32 +1,35 @@
 @import '../../../../app/header/header.component.scss';
 
 :host {
-  header { border-top: 4px solid var(--uagrm-red); }
+  header { background: var(--uagrm-night); color: #fff; --ds-header-bg: var(--uagrm-night); --ds-header-icon-color: #e0ebff; --ds-header-icon-color-hover: #fff; }
+  .uagrm-header-row { align-items: center; flex-wrap: wrap; gap: .75rem 1.5rem; padding-block: 1.5rem; }
+  .uagrm-brand { display: flex; align-items: center; gap: 1.25rem; white-space: normal; color: #fff; line-height: 1.3; margin-right: 0; max-width: 100%; text-decoration: none; }
+  .uagrm-brand-acronym { display: block; font-size: 2rem; font-weight: 750; letter-spacing: -.035em; }
+  .uagrm-brand-tagline { display: block; font-size: .5rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-top: .35rem; }
+  .uagrm-brand-details { display: block; padding-left: 1.25rem; border-left: 1px solid #60728d; }
+  .uagrm-brand-caption { display: block; font-size: .875rem; font-weight: 600; }
+  .uagrm-brand-university { display: block; font-size: .6875rem; color: #bdcce3; max-width: 17rem; margin-top: .2rem; }
+  .uagrm-header-actions { min-width: 0; max-width: 100%; flex-wrap: wrap; }
 
-  .uagrm-header-row {
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5rem 1rem;
-    padding-block: .75rem;
+  // White dropdowns must not inherit the light-on-dark toolbar colors.
+  header ::ng-deep {
+    .dropdown-menu { --ds-header-bg: #fff; --ds-header-icon-color: var(--uagrm-blue); --ds-header-icon-color-hover: #002b73; color: var(--uagrm-ink); }
+    ds-search-navbar input.form-control { background-color: var(--uagrm-night) !important; color: #fff; }
+    ds-search-navbar input.form-control::placeholder { color: #c5d4ea; }
   }
 
-  .uagrm-brand {
-    display: flex;
-    flex-direction: column;
-    white-space: normal;
-    color: var(--uagrm-blue);
-    line-height: 1.25;
-    margin-right: 0;
-    max-width: 100%;
-    text-decoration: none;
+  @media (max-width: 767.98px) {
+    .uagrm-header-row { padding-block: 1rem; }
+    .uagrm-brand { gap: .75rem; }
+    .uagrm-brand-details { border-left: 0; padding-left: 0; }
+    .uagrm-brand-caption { font-size: .75rem; }
+    .uagrm-brand-university { display: none; }
+    .uagrm-brand-acronym { font-size: 1.5rem; }
+    .uagrm-brand-tagline { font-size: .4375rem; letter-spacing: .1em; }
   }
 
-  .uagrm-brand-acronym {
-    font-size: 1.75rem;
-    font-weight: 750;
-    letter-spacing: .035em;
+  @media (max-width: 575.98px) {
+    .uagrm-brand-details { display: none; }
+    .uagrm-brand-tagline { max-width: 8rem; }
   }
-
-  .uagrm-brand-caption { font-size: 1rem; font-weight: 600; }
-  .uagrm-brand-university { font-size: .75rem; color: var(--uagrm-ink); }
 }

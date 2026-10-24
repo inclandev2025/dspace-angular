@@ -2,12 +2,17 @@
   <div class="container">
     <div class="d-flex flex-row justify-content-between uagrm-header-row">
       <a class="navbar-brand my-2 uagrm-brand" routerLink="/home" [attr.aria-label]="'uagrm.brand.home' | translate">
-        <span class="uagrm-brand-acronym">UAGRM</span>
-        <span class="uagrm-brand-caption">{{ 'uagrm.brand.repository' | translate }}</span>
-        <span class="uagrm-brand-university">Universidad Autónoma Gabriel René Moreno</span>
+        <span>
+          <span class="uagrm-brand-acronym">UAGRM</span>
+          <span class="uagrm-brand-tagline">{{ 'uagrm.brand.tagline' | translate }}</span>
+        </span>
+        <span class="uagrm-brand-details">
+          <span class="uagrm-brand-caption">{{ 'uagrm.brand.repository' | translate }}</span>
+          <span class="uagrm-brand-university">Universidad Autónoma Gabriel René Moreno</span>
+        </span>
       </a>
 
-      <div class="navbar navbar-light navbar-expand-md flex-shrink-0 px-0">
+      <div class="navbar navbar-dark navbar-expand-md px-0 uagrm-header-actions">
         <ds-search-navbar></ds-search-navbar>
         <div role="toolbar" [attr.aria-label]="'nav.user.description' | translate">
           <ds-lang-switch></ds-lang-switch>
