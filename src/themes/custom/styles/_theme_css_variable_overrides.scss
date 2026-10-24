@@ -1,5 +1,6 @@
 :root {
   --uagrm-blue: #003b9e;
+  --uagrm-night: #091b3b;
   --uagrm-red: #ff000d;
   --uagrm-ink: #142b50;
   --uagrm-surface: #f4f7fc;
@@ -18,5 +19,8 @@
   --ds-footer-border: var(--uagrm-border);
   --ds-home-news-background-color: var(--uagrm-surface);
   --ds-header-navbar-border-bottom-color: var(--uagrm-border);
+  --ds-navbar-bg: var(--uagrm-night);
+  --ds-navbar-link-color: #e0ebff;
+  --ds-navbar-link-color-hover: #fff;
   --ds-expandable-navbar-link-background-hover: #e8effb;
 }

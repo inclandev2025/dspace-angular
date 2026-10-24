@@ -14,6 +14,13 @@
   .card { box-shadow: var(--uagrm-card-shadow); }
 }
 
+// Only the homepage joins the dark hero directly to the native navigation.
+// Keep the existing spacing for search, items and administration.
+#main-content:has(ds-themed-home-page) {
+  padding-block: 0;
+  margin-block: 0;
+}
+
 // Two colors keep keyboard focus visible on both blue and white surfaces.
 a:focus-visible,
 button:focus-visible,
