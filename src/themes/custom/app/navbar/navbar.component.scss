@@ -2,7 +2,7 @@
 
 :host {
   #main-navbar {
-    border-bottom: 1px solid var(--uagrm-border);
+    border-bottom: 1px solid #304668;
   }
 
   #main-navbar ::ng-deep {
@@ -12,6 +12,7 @@
   }
 
   @media (min-width: 768px) {
+    #main-navbar { padding-bottom: .5rem; }
     #main-navbar ::ng-deep .navbar-nav { flex-wrap: wrap; }
   }
 
