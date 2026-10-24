@@ -1,5 +1,11 @@
 # Sprint 2 — Portada y navegación UAGRM
 
+**Actualización 24/10/2026:** el usuario confirmó que las funciones de esta entrega
+fueron probadas y funcionan correctamente. Tras comparar dos alternativas HTML,
+eligió la propuesta B, **Portal de investigación**. Su adaptación se realiza en
+una rama independiente; ver [Sprint 2B](SPRINT_02B_PORTAL_INVESTIGACION.md).
+La validación funcional no se presenta como aprobación definitiva del diseño previo.
+
 Fecha: 22/10/2026 (Bolivia). Estado: entrega para pruebas locales.
 Rama de desarrollo: `feature/uagrm-home-navigation-sprint-02`.
 

@@ -1,5 +1,13 @@
 # Plan de mejora visual del Repositorio Institucional DSpace UAGRM
 
+**Actualización 24/10/2026:** funciones del Sprint 2 confirmadas por el usuario.
+Dirección visual elegida: **Portal de investigación**, propuesta B del comparador
+HTML. Se adapta en [Sprint 2B](SPRINT_02B_PORTAL_INVESTIGACION.md) antes de continuar
+con búsqueda/resultados del Sprint 3. Se conserva el commit anterior como punto de
+recuperación. El usuario autorizó publicar la iteración y el respaldo del Sprint 2;
+ambas ramas están disponibles en GitHub. La revisión visual de la integración con
+el backend local sigue pendiente.
+
 **Fecha:** 22 de octubre de 2026  
 **Instancia objetivo:** [dspace.uagrm.edu.bo](https://dspace.uagrm.edu.bo/home)  
 **Frontend de referencia:** [DSpace/dspace-angular](https://github.com/DSpace/dspace-angular)
