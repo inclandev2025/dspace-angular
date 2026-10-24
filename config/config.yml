@@ -7,6 +7,13 @@ rest:
 # UAGRM visual prototype. Environment-specific REST/UI settings keep priority.
 # See docs/uagrm/SPRINT_01.md before local validation or release.
 fallbackLanguage: es
+languages:
+  - code: es
+    label: Español
+    active: true
+  - code: en
+    label: English
+    active: true
 themes:
   - name: custom
     prefetch: true
