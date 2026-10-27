@@ -15,8 +15,7 @@ import { ViewModeSwitchComponent } from '../../../../../../app/shared/view-mode-
   selector: 'ds-themed-search-sidebar',
   // styleUrls: ['./search-sidebar.component.scss'],
   styleUrls: ['../../../../../../app/shared/search/search-sidebar/search-sidebar.component.scss'],
-  // templateUrl: './search-sidebar.component.html',
-  templateUrl: '../../../../../../app/shared/search/search-sidebar/search-sidebar.component.html',
+  templateUrl: './search-sidebar.component.html',
   providers: [
     {
       provide: SEARCH_CONFIG_SERVICE,
