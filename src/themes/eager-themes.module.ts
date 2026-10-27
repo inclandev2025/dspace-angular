@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { UagrmItemSearchResultListElementComponent } from './custom/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/uagrm-item-search-result-list-element.component';
 import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 // import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
 
@@ -13,8 +14,10 @@ import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme
 @NgModule({
   imports: [
     DSpaceEagerThemeModule,
+    UagrmItemSearchResultListElementComponent,
     // CustomEagerThemeModule,
   ],
+  providers: [UagrmItemSearchResultListElementComponent],
 })
 export class EagerThemesModule {
 }
