@@ -48,12 +48,13 @@ Desde PowerShell, revisar primero cambios propios con `git status` y conservarlo
 ```powershell
 cd C:\xampp\htdocs\dspace-angular
 git status
+git remote set-branches --add origin feature/uagrm-search-results-sprint-03
 git fetch origin refs/heads/feature/uagrm-search-results-sprint-03:refs/remotes/origin/feature/uagrm-search-results-sprint-03
 git switch --track origin/feature/uagrm-search-results-sprint-03
 npm.cmd run start:dev
 ```
 
-Si ya existe la rama local, sustituir `git switch --track ...` por:
+El registro de la rama remota permite crear el seguimiento incluso si el clon original descargaba solo una rama. Si ya existe la rama local, sustituir `git switch --track ...` por:
 
 ```powershell
 git switch feature/uagrm-search-results-sprint-03
