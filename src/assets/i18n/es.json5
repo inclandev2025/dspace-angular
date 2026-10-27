@@ -11097,5 +11097,15 @@
   "uagrm.home.recent.title": "Nuevas miradas. Nuevas respuestas.",
   "uagrm.home.recent.intro": "Descubre la producción académica más reciente: ideas para consultar fuentes y abrir nuevas preguntas.",
   "uagrm.home.about.eyebrow": "Preservar para compartir",
-  "uagrm.home.about.title": "El conocimiento crece cuando está al alcance de todos."
+  "uagrm.home.about.title": "El conocimiento crece cuando está al alcance de todos.",
+  "uagrm.search.eyebrow": "Portal de investigación · UAGRM",
+  "uagrm.search.title": "Encuentra tu próxima referencia.",
+  "uagrm.search.intro": "Busca por título, autor o palabras clave. Combina los filtros para descubrir la producción académica que necesitas.",
+  "uagrm.search.count": "Resultados encontrados: {{count}}",
+  "uagrm.search.empty.title": "No encontramos resultados para esta búsqueda",
+  "uagrm.search.empty.hint": "Prueba con menos palabras, revisa la escritura o retira alguno de los filtros activos.",
+  "uagrm.search.authors": "Autoría",
+  "uagrm.search.date": "Fecha de publicación",
+  "uagrm.search.type": "Tipo documental",
+  "uagrm.search.collection": "Colección"
 }

@@ -7273,5 +7273,15 @@
   "uagrm.home.recent.title": "New perspectives. New answers.",
   "uagrm.home.recent.intro": "Discover recent academic output: ideas for finding sources and opening up new questions.",
   "uagrm.home.about.eyebrow": "Preserve to share",
-  "uagrm.home.about.title": "Knowledge grows when everyone can reach it."
+  "uagrm.home.about.title": "Knowledge grows when everyone can reach it.",
+  "uagrm.search.eyebrow": "Research portal · UAGRM",
+  "uagrm.search.title": "Find your next reference.",
+  "uagrm.search.intro": "Search by title, author or keywords. Combine filters to discover the academic work you need.",
+  "uagrm.search.count": "Results found: {{count}}",
+  "uagrm.search.empty.title": "No results found for this search",
+  "uagrm.search.empty.hint": "Try fewer words, check the spelling or remove one of the active filters.",
+  "uagrm.search.authors": "Authors",
+  "uagrm.search.date": "Publication date",
+  "uagrm.search.type": "Document type",
+  "uagrm.search.collection": "Collection"
 }
