@@ -1,5 +1,7 @@
 # Plan de mejora visual del Repositorio Institucional DSpace UAGRM
 
+**Actualización 27/10/2026:** Sprint 3 iniciado desde el portal aprobado (`b6ce493`). La implementación de búsqueda y resultados está preparada en `feature/uagrm-search-results-sprint-03`, pendiente de revisión local y aceptación. Ver [Sprint 3 — Búsqueda y resultados](SPRINT_03_BUSQUEDA.md). Esta actualización sustituye el estado pendiente de Sprint 2B indicado en el registro histórico siguiente. Se mantienen los tres respaldos existentes y no se despliega a producción.
+
 **Actualización 24/10/2026:** funciones del Sprint 2 confirmadas por el usuario.
 Dirección visual elegida: **Portal de investigación**, propuesta B del comparador
 HTML. Se adapta en [Sprint 2B](SPRINT_02B_PORTAL_INVESTIGACION.md) antes de continuar
