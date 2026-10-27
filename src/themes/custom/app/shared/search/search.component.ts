@@ -21,8 +21,7 @@ import { ViewModeSwitchComponent } from '../../../../../app/shared/view-mode-swi
   selector: 'ds-themed-search',
   // styleUrls: ['./search.component.scss'],
   styleUrls: ['../../../../../app/shared/search/search.component.scss'],
-  // templateUrl: './search.component.html',
-  templateUrl: '../../../../../app/shared/search/search.component.html',
+  templateUrl: './search.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [pushInOut],
   imports: [
