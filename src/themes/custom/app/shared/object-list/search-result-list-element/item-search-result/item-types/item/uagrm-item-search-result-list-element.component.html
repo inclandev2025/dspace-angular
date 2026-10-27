@@ -1,0 +1,77 @@
+@if (dso) {
+  <article class="uagrm-result-card">
+    @if (showThumbnails) {
+      @if (dso.thumbnail | async; as thumbnail) {
+        @if (thumbnail.hasSucceeded && thumbnail.payload) {
+          <div class="uagrm-result-thumbnail">
+            @if (linkType !== linkTypes.None) {
+              <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'"
+                [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+                [routerLink]="[itemPageRoute]" tabindex="-1">
+                <ds-thumbnail [thumbnail]="thumbnail" [limitWidth]="true"></ds-thumbnail>
+              </a>
+            } @else {
+              <ds-thumbnail [thumbnail]="thumbnail" [limitWidth]="true"></ds-thumbnail>
+            }
+          </div>
+        }
+      }
+    }
+    <div class="uagrm-result-body">
+      @if (showLabel) {
+        <ds-badges [object]="dso" [context]="context" [showAccessStatus]="true"></ds-badges>
+      }
+      <ds-truncatable [id]="dso.id">
+        <h2 class="uagrm-result-title">
+          @if (linkType !== linkTypes.None) {
+            <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'"
+              [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+              [routerLink]="[itemPageRoute]" class="item-list-title dont-break-out" [innerHTML]="dsoTitle"></a>
+          } @else {
+            <span class="item-list-title dont-break-out" [innerHTML]="dsoTitle"></span>
+          }
+        </h2>
+        @if (dso.allMetadata(['dc.contributor.author', 'dc.creator']).length > 0) {
+          <div class="uagrm-result-authors">
+            <span class="visually-hidden">{{ 'uagrm.search.authors' | translate }}: </span>
+            <ds-truncatable-part [id]="dso.id" [minLines]="1">
+              @for (author of allMetadataValues(['dc.contributor.author', 'dc.creator']); track $index; let last = $last) {
+                <span [innerHTML]="author"></span>@if (!last) {<span>; </span>}
+              }
+            </ds-truncatable-part>
+          </div>
+        }
+        <div class="uagrm-result-metadata">
+          @if (dso.firstMetadataValue('dc.date.issued')) {
+            <span><i class="far fa-calendar" aria-hidden="true"></i>
+              <span class="visually-hidden">{{ 'uagrm.search.date' | translate }}: </span>
+              <span [innerHTML]="firstMetadataValue('dc.date.issued')"></span>
+            </span>
+          }
+          @if (dso.firstMetadataValue('dc.type')) {
+            <span><i class="far fa-file-lines" aria-hidden="true"></i>
+              <span class="visually-hidden">{{ 'uagrm.search.type' | translate }}: </span>
+              <span [innerHTML]="firstMetadataValue('dc.type')"></span>
+            </span>
+          }
+          @if (dso.firstMetadataValue('dc.publisher')) {
+            <span class="uagrm-result-publisher" [innerHTML]="firstMetadataValue('dc.publisher')"></span>
+          }
+        </div>
+        @if (dso.firstMetadataValue('dc.description.abstract')) {
+          <div class="uagrm-result-abstract">
+            <ds-truncatable-part [id]="dso.id" [minLines]="3">
+              <span [innerHTML]="firstMetadataValue('dc.description.abstract')"></span>
+            </ds-truncatable-part>
+          </div>
+        }
+        @if ((dso.owningCollection | async)?.payload; as collection) {
+          <p class="uagrm-result-collection">
+            <i class="far fa-folder-open" aria-hidden="true"></i>
+            <span>{{ 'uagrm.search.collection' | translate }}: {{ dsoNameService.getName(collection) }}</span>
+          </p>
+        }
+      </ds-truncatable>
+    </div>
+  </article>
+}
