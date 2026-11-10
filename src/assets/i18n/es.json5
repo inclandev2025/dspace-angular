@@ -11107,5 +11107,10 @@
   "uagrm.search.authors": "Autoría",
   "uagrm.search.date": "Fecha de publicación",
   "uagrm.search.type": "Tipo documental",
-  "uagrm.search.collection": "Colección"
+  "uagrm.search.collection": "Colección",
+  "uagrm.repository.navigation": "Navegación del repositorio",
+  "uagrm.repository.all-communities": "Explorar comunidades y colecciones",
+  "uagrm.repository.community": "Comunidad",
+  "uagrm.repository.collection": "Colección",
+  "uagrm.repository.rights": "Derechos y licencia",
 }
