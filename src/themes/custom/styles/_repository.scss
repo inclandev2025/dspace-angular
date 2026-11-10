@@ -1,0 +1,116 @@
+// Public repository pages only; leave editing and submission screens untouched.
+.uagrm-repository-page,
+.uagrm-document-page {
+  color: #243650;
+  overflow-wrap: anywhere;
+
+  .uagrm-section-label {
+    color: #003b9e;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .uagrm-repository-header,
+  .uagrm-document-header {
+    background: #f1f5fc;
+    border: 1px solid #dbe4f0;
+    border-top: 4px solid #003b9e;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: clamp(1rem, 3vw, 2rem);
+    margin-bottom: 1.5rem;
+    min-width: 0;
+
+    .comcol-header,
+    ds-item-page-title-field {
+      min-width: 0;
+    }
+
+    h1 {
+      color: #091b3b;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      line-height: 1.25;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .uagrm-content-panel {
+    border: 1px solid #dbe4f0;
+    border-radius: 1rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #fff;
+  }
+
+  .comcol-browse .list-group-horizontal {
+    flex-wrap: wrap;
+    gap: .4rem;
+
+    .list-group-item {
+      border: 1px solid #ccd8ea;
+      border-radius: .5rem;
+      margin: 0;
+
+      &.active {
+        background: #003b9e;
+        border-color: #003b9e;
+        color: #fff;
+      }
+    }
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible {
+    outline: 3px solid #003b9e;
+    outline-offset: 3px;
+  }
+}
+
+.uagrm-document-page {
+  .uagrm-document-sidebar,
+  .uagrm-document-content {
+    min-width: 0;
+  }
+
+  .uagrm-document-sidebar {
+    background: #f7f9fc;
+    border-radius: .8rem;
+    padding: 1.25rem;
+  }
+
+  .uagrm-document-content {
+    padding-inline: 1.5rem;
+  }
+
+  ds-metadata-field-wrapper {
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .uagrm-document-sidebar ds-thumbnail img {
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+  .btn-outline-primary {
+    border-radius: .5rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .uagrm-repository-page .uagrm-repository-header,
+  .uagrm-document-page .uagrm-document-header {
+    flex-wrap: wrap;
+  }
+
+  .uagrm-document-page .uagrm-document-content {
+    padding-inline: .75rem;
+  }
+}
