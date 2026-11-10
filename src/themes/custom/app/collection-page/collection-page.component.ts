@@ -3,7 +3,10 @@ import {
   ChangeDetectionStrategy,
   Component,
 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {
+  RouterLink,
+  RouterOutlet,
+} from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CollectionPageComponent as BaseComponent } from '../../../../app/collection-page/collection-page.component';
@@ -23,8 +26,7 @@ import { VarDirective } from '../../../../app/shared/utils/var.directive';
 
 @Component({
   selector: 'ds-themed-collection-page',
-  // templateUrl: './collection-page.component.html',
-  templateUrl: '../../../../app/collection-page/collection-page.component.html',
+  templateUrl: './collection-page.component.html',
   // styleUrls: ['./collection-page.component.scss']
   styleUrls: ['../../../../app/collection-page/collection-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -38,6 +40,7 @@ import { VarDirective } from '../../../../app/shared/utils/var.directive';
     ComcolPageLogoComponent,
     DsoEditMenuComponent,
     ErrorComponent,
+    RouterLink,
     RouterOutlet,
     ThemedComcolPageBrowseByComponent,
     ThemedComcolPageContentComponent,
