@@ -39,5 +39,10 @@
   "uagrm.search.authors": "Authors",
   "uagrm.search.date": "Publication date",
   "uagrm.search.type": "Document type",
-  "uagrm.search.collection": "Collection"
+  "uagrm.search.collection": "Collection",
+  "uagrm.repository.navigation": "Repository navigation",
+  "uagrm.repository.all-communities": "Explore communities and collections",
+  "uagrm.repository.community": "Community",
+  "uagrm.repository.collection": "Collection",
+  "uagrm.repository.rights": "Rights and license",
 }
