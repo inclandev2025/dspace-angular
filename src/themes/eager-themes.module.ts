@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 
+import { PublicationComponent } from './custom/app/item-page/simple/item-types/publication/publication.component';
+import { UntypedItemComponent } from './custom/app/item-page/simple/item-types/untyped-item/untyped-item.component';
 import { UagrmItemSearchResultListElementComponent } from './custom/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/uagrm-item-search-result-list-element.component';
 import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme.module';
 // import { EagerThemeModule as CustomEagerThemeModule } from './custom/eager-theme.module';
@@ -14,10 +16,12 @@ import { EagerThemeModule as DSpaceEagerThemeModule } from './dspace/eager-theme
 @NgModule({
   imports: [
     DSpaceEagerThemeModule,
+    PublicationComponent,
+    UntypedItemComponent,
     UagrmItemSearchResultListElementComponent,
     // CustomEagerThemeModule,
   ],
-  providers: [UagrmItemSearchResultListElementComponent],
+  providers: [UagrmItemSearchResultListElementComponent, PublicationComponent, UntypedItemComponent],
 })
 export class EagerThemesModule {
 }
