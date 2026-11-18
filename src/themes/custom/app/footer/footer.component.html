@@ -1,7 +1,10 @@
 <footer class="uagrm-footer">
   <div class="container uagrm-footer-grid">
     <div>
-      <p class="uagrm-footer-brand">UAGRM</p>
+      <a routerLink="/home" [attr.aria-label]="'uagrm.brand.home' | translate">
+        <img class="uagrm-footer-logo" src="assets/custom/images/logo-uagrm.webp"
+          alt="Universidad Autónoma Gabriel René Moreno" width="1026" height="545" loading="lazy">
+      </a>
       <p class="h5 text-white">{{ 'uagrm.brand.repository' | translate }}</p>
       <p>Universidad Autónoma Gabriel René Moreno</p>
       <p class="uagrm-footer-description">{{ 'uagrm.footer.description' | translate }}</p>
